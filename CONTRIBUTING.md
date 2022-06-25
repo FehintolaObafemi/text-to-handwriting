@@ -4,7 +4,7 @@ The project is built with basic web setup (HTML, CSS, and JavaScript).
 
 ## 🐨 Local Setup
 
-- [Fork](https://github.com/saurabhdaware/text-to-handwriting/fork) this repository.
+- [Fork](https://github.com/fehintolaobafemi/text-to-handwriting/fork) this repository.
 
 *Note: You need NodeJS installed in your machine to run formatter and server*
 

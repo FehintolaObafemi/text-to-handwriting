@@ -12,9 +12,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'UA-125454191-4');
+      gtag("config", "UA-125454191-4");
     </script>
 
     <!-- Mobile Specific Metas -->
@@ -609,37 +609,37 @@
     <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
     <script>
       function toggleTheme(toggleButton) {
-        if (document.body.classList.contains('dark')) {
-          document.body.classList.add('fade-in-light');
-          document.body.classList.remove('dark');
-          document.body.classList.remove('fade-in-dark');
-          window.localStorage.setItem('prefers-theme', 'light');
+        if (document.body.classList.contains("dark")) {
+          document.body.classList.add("fade-in-light");
+          document.body.classList.remove("dark");
+          document.body.classList.remove("fade-in-dark");
+          window.localStorage.setItem("prefers-theme", "light");
           if (toggleButton) {
-            toggleButton.setAttribute('aria-pressed', false);
-            toggleButton.setAttribute('aria-label', 'Activate Dark Mode');
+            toggleButton.setAttribute("aria-pressed", false);
+            toggleButton.setAttribute("aria-label", "Activate Dark Mode");
           }
         } else {
-          document.body.classList.add('fade-in-dark');
-          document.body.classList.add('dark');
-          document.body.classList.remove('fade-in-light');
-          window.localStorage.setItem('prefers-theme', 'dark');
+          document.body.classList.add("fade-in-dark");
+          document.body.classList.add("dark");
+          document.body.classList.remove("fade-in-light");
+          window.localStorage.setItem("prefers-theme", "dark");
           if (toggleButton) {
-            toggleButton.setAttribute('aria-pressed', true);
-            toggleButton.setAttribute('aria-label', 'Activate Light Mode');
+            toggleButton.setAttribute("aria-pressed", true);
+            toggleButton.setAttribute("aria-label", "Activate Light Mode");
           }
         }
       }
 
-      const localPreference = window.localStorage.getItem('prefers-theme');
+      const localPreference = window.localStorage.getItem("prefers-theme");
       if (localPreference) {
-        if (localPreference === 'light') document.body.classList.remove('dark');
-        else document.body.classList.add('dark');
-      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        if (localPreference === "light") document.body.classList.remove("dark");
+        else document.body.classList.add("dark");
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add("dark");
       }
 
-      document.querySelectorAll('#donations a[href]').forEach((anchorEl) => {
-        anchorEl.addEventListener('click', (e) => {
+      document.querySelectorAll("#donations a[href]").forEach((anchorEl) => {
+        anchorEl.addEventListener("click", (e) => {
           const tracker = ga.getAll()[0];
           let label;
           if (e.target.href) {
@@ -649,7 +649,7 @@
           }
 
           if (tracker) {
-            tracker.send('event', 'Donation Link', 'Click', label);
+            tracker.send("event", "Donation Link", "Click", label);
           }
         });
       });
